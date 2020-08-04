@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { Navbar, NavbarToggler, Collapse, Nav, NavItem, NavLink, Button } from "reactstrap";
 import { NavLink as Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
-import { authToken, user as userAtom } from "../recoil/atoms";
+import { user as userAtom } from "../recoil/atoms";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const user = useRecoilValue(userAtom);
 
   const toggle = () => setIsOpen((state) => !state);
-  console.log(user);
   return (
     <Navbar color="primary" dark expand="md">
       <NavbarToggler onClick={toggle} />

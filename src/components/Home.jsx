@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Row, Col, Button, Spinner } from "reactstrap";
 import Axios from "axios";
 import { useSetRecoilState } from "recoil";
+import { Row, Col, Button, Spinner } from "reactstrap";
+
 import { user as userAtom, isAuth as isAuthAtom, token as tokenAtom } from "../recoil/atoms";
 
 function Home() {
@@ -20,7 +21,6 @@ function Home() {
       Axios.get("https://reqres.in/api/users/2"),
     ])
       .then(([resLogin, resUser]) => {
-        console.log(resLogin);
         setIsAuth(true);
         setUser(resUser.data.data);
         setToken(resLogin.data.token);

@@ -1,11 +1,11 @@
 import React from "react";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Alert } from "reactstrap";
 
 function Admin() {
   return (
     <Row className="justify-content-center">
-      <Col xs="2" className="text-center">
-        You are successfully logged in so you can access this page
+      <Col className="text-center">
+        <Alert color="success">You are successfully logged in so you can access this page</Alert>
       </Col>
     </Row>
   );
