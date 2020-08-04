@@ -33,6 +33,10 @@ function Home() {
 
   return (
     <Row className="justify-content-center">
+      <Col xs="12" className="text-center">
+        <p>This app is built using React and Recoil, just to do a quick test with this new state lib.</p>
+        <p>You could access the /admin page if you are logged in (using the Login button)</p>
+      </Col>
       <Col xs="2" className="text-center">
         <Button color="success" outline block onClick={login} disabled={loading}>
           {!loading ? "Login !" : <Spinner size="sm" />}

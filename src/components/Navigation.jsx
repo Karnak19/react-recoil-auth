@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Navbar, NavbarToggler, Collapse, Nav, NavItem, NavLink, Button } from "reactstrap";
 import { NavLink as Link } from "react-router-dom";
 import { useRecoilValue } from "recoil";
+
 import { user as userAtom } from "../recoil/atoms";
+import GitHub from "./GithubSvg";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +28,10 @@ function Navigation() {
           </NavItem>
         </Nav>
       </Collapse>
-      <img className="img-fluid" src={user.avatar} alt={user.email} style={{ maxHeight: 40 }} />
+      <img className="img-fluid mr-3" src={user.avatar} alt={user.email} style={{ maxHeight: 40 }} />
+      <a href="https://github.com/Karnak19/react-recoil-auth" target="_blank">
+        <GitHub />
+      </a>
     </Navbar>
   );
 }
